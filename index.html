@@ -1,8 +1,29 @@
 <html>
 <body>
 
-<iframe src="https://script.google.com/a/macros/panyarathighschool.ac.th/s/AKfycbwyBf72faltubhsf0xzgee9AisWH4w4BFvtk3wLhyhBcO4n7g3YLbQZfM5jkDVpIxKx/exec" height="500px" width="100%" frameborder="0"scrolling="auto"align="right">
-</iframe>
+<style>
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+  
+ 
+    <iframe id="myframe" class="responsive-iframe" src="https://script.google.com/macros/s/AKfycbyeMWlwqpevq8hFBiocDTx6ywTXpJZaVh_HW1aMlf-pA7W0tjCW_zJlPg0SirYeuSv6/exec" allowFullScreen></iframe>
+  
+
+  <script>
+    const apps = new URL(window.location);
+    const formUrl = apps.searchParams.get('apps');
+    const url = decodeURIComponent(formUrl)
+          document.getElementById('myframe').src = url
+  </script>
 
 </body>
 </html>
